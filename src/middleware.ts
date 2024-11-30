@@ -9,6 +9,11 @@ const nextIntlMiddleware = createMiddleware({
     defaultLocale: 'en',
 });
 
+export const config = {
+    // Skip all paths that should not be internationalized
+    matcher: ['/((?!api|_next|.*\\..*).*)'],
+};
+
 const REDIRECT_MAP: Record<string, { url: string; status: number }> = {
     // 308 permanent redirect
     // '/Config/Search': { url: '/', status: 307 }, // TODO: change url after implement the page '/search',
