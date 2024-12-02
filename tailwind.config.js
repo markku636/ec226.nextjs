@@ -19,6 +19,7 @@ module.exports = {
         },
         extend: {
             fontFamily: {
+                body: ['sans-serif'], // Replace with your desired font
                 marker: ['Permanent Marker', 'cursive'],
                 'element-hybrid': ['Montserrat', 'sans-serif'],
             },

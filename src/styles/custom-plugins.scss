@@ -1,0 +1,99 @@
+/* Accordion */
+.accordion.rc-collapse {
+    @apply space-y-2.5 border-0 bg-transparent;
+}
+
+.accordion.rc-collapse > .rc-collapse-item {
+    @apply rounded-md border-0 bg-gray-200 px-6;
+}
+
+.accordion.rc-collapse > .rc-collapse-item > .rc-collapse-header {
+    @apply px-0 py-4 outline-none;
+}
+
+.accordion.rc-collapse > .rc-collapse-item > .rc-collapse-header h3 {
+    @apply py-0.5 transition duration-200 ease-in;
+    letter-spacing: 0.015em;
+}
+
+.accordion.rc-collapse > .rc-collapse-item > .rc-collapse-header:hover h3 {
+    @apply text-black;
+}
+
+.accordion.rc-collapse > .rc-collapse-item > .rc-collapse-content {
+    @apply bg-transparent py-0 text-body ltr:pl-0 ltr:pr-32 rtl:pl-32 rtl:pr-0;
+}
+
+.accordion.rc-collapse > .rc-collapse-item > .rc-collapse-content > .rc-collapse-content-box {
+    @apply my-0 pb-5 text-sm leading-6;
+}
+
+/* React Tabs */
+.react-tabs__tab--selected {
+    @apply rounded-md bg-gray-100 font-semibold;
+    background-color: #f7fafc !important; // 手动添加 !important
+}
+
+/* React Stars */
+.react-stars {
+    @apply gap-x-0.5;
+}
+
+/* Toastify */
+.Toastify .fancy-progress-bar {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.Toastify .Toastify__toast {
+    background-color: #000;
+
+    .Toastify__toast-body,
+    .Toastify__close-button {
+        color: #ffffff;
+    }
+
+    .Toastify__close-button {
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Toastify .Toastify__toast-container--top-left,
+    .Toastify .Toastify__toast-container--top-center,
+    .Toastify .Toastify__toast-container--top-right {
+        top: 66px;
+    }
+}
+
+/* Drawer */
+.rc-drawer .rc-drawer-content-wrapper {
+    @apply w-full;
+    @apply sm:w-[450px];
+}
+
+.drawer-search {
+    transform: translate(-50%, 50px);
+
+    &.open {
+        @apply visible fixed top-0 block opacity-100;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Overlay */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 21;
+    visibility: hidden;
+    @apply fixed top-0 flex h-full w-full opacity-0 ltr:left-0 rtl:right-0;
+    transition: 0.35s ease-in-out;
+
+    &.open {
+        @apply opacity-100;
+        visibility: visible;
+    }
+}
