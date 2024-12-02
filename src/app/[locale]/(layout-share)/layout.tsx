@@ -18,19 +18,30 @@ import { headers } from 'next/headers';
 import { use } from 'react';
 
 type Props = {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 };
 
 // see /ancient, /checkout page
-export function generateMetadata({ params }: Props, parent: ResolvingMetadata): Metadata {
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+    const params = await props.params;
     const locale = params.locale;
 
-    const url = new URL(headers().get('x-url')!);
+    const url = new URL((await headers()).get('x-url')!);
 
     return generateDefaultMetadata(locale, url.pathname);
 }
 
-export default function Layout({ params: { locale }, children }: Readonly<ILayoutProps>) {
+export default function Layout(props: Readonly<ILayoutProps>) {
+    const params = use(props.params);
+
+    const {
+        locale
+    } = params;
+
+    const {
+        children
+    } = props;
+
     const t = useTranslations('layout');
 
     const data = use(fetchLayout());
