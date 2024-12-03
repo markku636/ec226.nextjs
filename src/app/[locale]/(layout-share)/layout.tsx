@@ -6,6 +6,7 @@ import { ILayoutProps } from '@/typing/page-props';
 import ManagedDrawer from '@components/common/drawer/managed-drawer';
 import ManagedModal from '@components/common/modal/managed-modal';
 import NewManageModal from '@components/common/modal/new-managed-modal';
+import Search from '@components/common/search';
 import Footer from '@components/layout/footer/footer';
 import Header from '@components/layout/header/header';
 import Mainbody from '@components/layout/main-body';
@@ -34,13 +35,9 @@ export async function generateMetadata(props: Props, parent: ResolvingMetadata):
 export default function Layout(props: Readonly<ILayoutProps>) {
     const params = use(props.params);
 
-    const {
-        locale
-    } = params;
+    const { locale } = params;
 
-    const {
-        children
-    } = props;
+    const { children } = props;
 
     const t = useTranslations('layout');
 
@@ -56,9 +53,11 @@ export default function Layout(props: Readonly<ILayoutProps>) {
                 <Mainbody locale={locale}>{children}</Mainbody>
                 <Footer footer={footer} />
                 <MobileNavigation header={header} />
+                <Search />
                 <NewManageModal />
                 <ManagedModal />
                 <ManagedDrawer />
+                {/* <CookieBar /> */}
             </MultiLangClientProvider>
         </>
     );

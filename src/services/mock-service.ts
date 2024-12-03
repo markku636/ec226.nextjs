@@ -19,7 +19,11 @@ export async function fetchLayout(): Promise<ILayout> {
         },
         header: {
             id: 1,
-            menu: [{ id: 4, titleLang: 'login', link: '/login' }],
+            menu: [
+                { id: 4, titleLang: 'login', link: '/login' },
+
+                { id: 5, titleLang: 'test', link: '/test' },
+            ],
             languageMenu: [
                 { id: 1, nameLang: 'language-menu-de', value: 'de' },
                 { id: 2, nameLang: 'language-menu-en', value: 'en' },
