@@ -1,15 +1,12 @@
 'use client';
 
 import cn from 'classnames';
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { IoIosArrowForward } from 'react-icons/io';
 import Link from './link';
 import MegaMenu from './mega-menu';
 
 const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, menuIndex }: any) => {
-    const t = useTranslations('menu');
-
     return (
         <li className={cn(!hasMegaMenu ? 'group relative' : '')}>
             <Link
@@ -17,7 +14,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
                 className="flex items-center py-2 hover:bg-gray-300 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
             >
                 {data.icon && <span className="inline-flex ltr:mr-2 rtl:ml-2">{data.icon}</span>}
-                {t(data.titleLang)}
+                {data.titleLang}
                 {data.subMenu && (
                     <span className="mt-0.5 shrink-0 text-sm ltr:ml-auto rtl:mr-auto">
                         <IoIosArrowForward className="transition duration-300 ease-in-out text-body group-hover:text-black" />

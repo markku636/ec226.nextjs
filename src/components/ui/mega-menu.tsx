@@ -1,6 +1,5 @@
 'use client';
 import Link from '@components/ui/link';
-import { useTranslations } from 'next-intl';
 import React from 'react';
 
 interface MenuItem {
@@ -17,8 +16,6 @@ type MegaMenuProps = {
 };
 
 const MegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
-    const t = useTranslations('menu');
-
     return (
         <div className="absolute bg-gray-200 megaMenu py-7 shadow-header ltr:-left-28 rtl:-right-28 ltr:xl:left-0 rtl:xl:right-0 ">
             <div className="grid grid-cols-5">
@@ -31,7 +28,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
                                         href={columnItem.link}
                                         className="block px-5 py-1.5 text-sm font-semibold text-heading hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
                                     >
-                                        {t(columnItem.titleLang)}
+                                        {columnItem.titleLang}
                                     </Link>
                                 </li>
                                 {columnItem?.columnItemItems?.map((item: any) => (
@@ -47,7 +44,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
                                             href={item.link}
                                             className="block px-5 py-1.5 text-sm text-body hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
                                         >
-                                            {t(item.titleLang)}
+                                            {item.titleLang}
                                         </Link>
                                     </li>
                                 ))}
