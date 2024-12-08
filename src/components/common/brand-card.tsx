@@ -1,7 +1,7 @@
 'use client';
 import { useTranslationsCommon } from '@/hooks/translations/use-translation-hooks';
 import { Brand } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,7 +12,7 @@ const BrandCard: React.FC<{ brand: Brand }> = ({ brand }) => {
     return (
         <Link
             href={{
-                pathname: TEMPLATE_ROUTES.SEARCH,
+                pathname: ROUTES.SEARCH,
                 query: { brand: slug },
             }}
         >

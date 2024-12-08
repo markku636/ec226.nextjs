@@ -1,16 +1,16 @@
 'use client';
 import { useTranslationsCommon } from '@/hooks/translations/use-translation-hooks';
+import usePageLocale from '@/hooks/use-locale';
 import Button from '@components/ui/button';
 import Input from '@components/ui/input';
 import Text from '@components/ui/text';
 import { getDirection } from '@utils/get-direction';
-import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 
 const data = {
-    title: 'common:text-subscribe-heading',
-    description: 'common:text-subscribe-description',
-    buttonText: 'common:button-subscribe',
+    title: 'text-subscribe-heading',
+    description: 'text-subscribe-description',
+    buttonText: 'button-subscribe',
 };
 
 interface Props {
@@ -33,8 +33,8 @@ const SubscriptionWithBg: React.FC<Props> = ({ className = 'px-5 sm:px-8 md:px-1
     } = useForm<FormValues>({
         defaultValues,
     });
-    const { locale } = useRouter();
-    const dir = getDirection(locale);
+
+    const dir = getDirection(usePageLocale());
     const t = useTranslationsCommon();
     const { title, description, buttonText } = data;
 
@@ -58,21 +58,21 @@ const SubscriptionWithBg: React.FC<Props> = ({ className = 'px-5 sm:px-8 md:px-1
             >
                 <div className="flex flex-col items-start justify-end sm:flex-row">
                     <Input
-                        placeholderKey="forms:placeholder-email-subscribe"
+                        placeholderKey="placeholder-email-subscribe"
                         type="email"
                         variant="solid"
                         className="w-full"
                         inputClassName="px-4 lg:px-7 h-12 lg:h-14 text-center ltr:sm:text-left rtl:sm:text-right bg-white"
                         {...register('subscription_email', {
-                            required: 'forms:email-required',
+                            required: 'email-required',
                             pattern: {
                                 value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                message: 'forms:email-error',
+                                message: 'email-error',
                             },
                         })}
                         errorKey={errors.subscription_email?.message}
                     />
-                    <Button className="mt-3 w-full flex-shrink-0 sm:mt-0 sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 md:h-full">
+                    <Button className="flex-shrink-0 w-full mt-3 sm:mt-0 sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 md:h-full">
                         <span className="lg:py-0.5">{t(`${buttonText}`)}</span>
                     </Button>
                 </div>

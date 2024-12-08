@@ -1,7 +1,7 @@
 'use client';
 import { useTranslationsCommon } from '@/hooks/translations/use-translation-hooks';
 import { Category } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -16,7 +16,7 @@ const CategoryListCard: React.FC<Props> = ({ category }) => {
 
     return (
         <Link
-            href={`${TEMPLATE_ROUTES.CATEGORY}/${category.slug}`}
+            href={`${ROUTES.CATEGORY}/${category.slug}`}
             className="flex items-center justify-between rounded-md bg-gray-200 px-5 py-3 transition hover:bg-gray-100 xl:py-3.5 2xl:px-3.5 2xl:py-2.5 3xl:py-3.5"
         >
             <div className="flex items-center">

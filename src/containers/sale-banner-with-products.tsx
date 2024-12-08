@@ -6,7 +6,7 @@ import ProductCardListSmallLoader from '@components/ui/loaders/product-card-smal
 import { useOnSellingProductsQuery } from '@framework/product/get-all-on-selling-products';
 import { saleBannerWithProducts as banner } from '@framework/static/banner';
 import { Product } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 
 interface ProductsProps {
     sectionHeading: string;
@@ -34,7 +34,7 @@ const SaleBannerWithProducts: React.FC<ProductsProps> = ({
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:gap-5 xl:gap-7 2xl:grid-cols-4 2xl:grid-rows-2">
                     <BannerCard
                         banner={banner[0]}
-                        href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner[0].slug}`}
+                        href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
                         effectActive={true}
                         className="order-2 md:col-span-full 2xl:col-span-2 2xl:row-span-2"
                     />

@@ -6,9 +6,9 @@ import Text from '@components/ui/text';
 import { useForm } from 'react-hook-form';
 
 const data = {
-    title: 'common:text-subscribe-heading',
-    description: 'common:text-subscribe-description',
-    buttonText: 'common:button-subscribe',
+    title: 'text-subscribe-heading',
+    description: 'text-subscribe-description',
+    buttonText: 'button-subscribe',
 };
 
 interface Props {
@@ -59,7 +59,7 @@ const Subscription: React.FC<Props> = ({
                 <div className="flex flex-col items-start justify-end sm:flex-row">
                     <Input
                         disableBorderRadius={disableBorderRadius}
-                        placeholderKey="forms:placeholder-email-subscribe"
+                        placeholderKey="placeholder-email-subscribe"
                         type="email"
                         variant="solid"
                         className="w-full"
@@ -75,7 +75,7 @@ const Subscription: React.FC<Props> = ({
                     />
                     <Button
                         disableBorderRadius={disableBorderRadius}
-                        className="mt-3 w-full flex-shrink-0 sm:mt-0 sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 md:h-full"
+                        className="flex-shrink-0 w-full mt-3 sm:mt-0 sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 md:h-full"
                     >
                         <span className="lg:py-0.5">{t(`${buttonText}`)}</span>
                     </Button>

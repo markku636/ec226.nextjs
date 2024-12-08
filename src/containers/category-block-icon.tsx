@@ -7,7 +7,7 @@ import CardIconLoader from '@components/ui/loaders/card-icon-loader';
 import CardRoundedLoader from '@components/ui/loaders/card-rounded-loader';
 import { useCategoriesQuery } from '@framework/category/get-all-categories';
 import { Category } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import cn from 'classnames';
 import { SwiperSlide } from 'swiper/react';
 
@@ -137,7 +137,7 @@ const CategoryBlockIcon: React.FC<CategoriesProps> = ({
                               <SwiperSlide key={`category--icon-key-${category.id}`}>
                                   <IconCard
                                       item={category}
-                                      href={`${TEMPLATE_ROUTES.CATEGORY}/${category.slug}`}
+                                      href={`${ROUTES.CATEGORY}/${category.slug}`}
                                       effectActive={true}
                                       variant={variant}
                                   />

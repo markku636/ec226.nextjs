@@ -6,7 +6,7 @@ import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import CardRoundedLoader from '@components/ui/loaders/card-rounded-loader';
 import { useBrandsQuery } from '@framework/brand/get-all-brands';
 import { Brand } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface BrandProps {
@@ -86,7 +86,7 @@ const BrandBlock: React.FC<BrandProps> = ({
                                       variant="rounded"
                                       size="medium"
                                       href={{
-                                          pathname: TEMPLATE_ROUTES.SEARCH,
+                                          pathname: ROUTES.SEARCH,
                                           query: { brand: brand.slug },
                                       }}
                                       imgSize="large"

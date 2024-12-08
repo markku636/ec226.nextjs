@@ -1,5 +1,6 @@
 'use client';
 
+import usePageLocale from '@/hooks/use-locale';
 import { getDirection } from '@utils/get-direction';
 import cn from 'classnames';
 import { useLocale } from 'next-intl';
@@ -58,7 +59,7 @@ const CarouselTemplate: React.FunctionComponent<CarouselPropsType> = ({
 }) => {
     const locale = useLocale();
 
-    const dir = getDirection(locale);
+    const dir = getDirection(usePageLocale());
     const prevRef = useRef<HTMLButtonElement>(null);
     const nextRef = useRef<HTMLButtonElement>(null);
     const classPagination = paginationPosition ? `pagination-${paginationPosition}` : '';

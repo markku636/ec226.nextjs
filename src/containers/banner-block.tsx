@@ -1,5 +1,5 @@
 import BannerCard from '@components/common/banner-card';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 
 interface BannerProps {
     data: any;
@@ -13,7 +13,7 @@ const BannerBlock: React.FC<BannerProps> = ({ data, className = 'mb-12 md:mb-14 
                 <BannerCard
                     key={`banner--key${banner.id}`}
                     banner={banner}
-                    href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                    href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                     effectActive={true}
                     variant="default"
                     className={banner.type === 'medium' ? 'col-span-full sm:col-span-5' : 'col-span-1 sm:col-span-2'}

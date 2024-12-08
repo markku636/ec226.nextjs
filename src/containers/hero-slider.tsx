@@ -1,7 +1,7 @@
 'use client';
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import cn from 'classnames';
 import { SwiperSlide } from 'swiper/react';
 
@@ -55,7 +55,7 @@ const HeroSlider: React.FC<Props> = ({
                     <SwiperSlide className="carouselItem" key={`banner--key-${banner?.id}`}>
                         <BannerCard
                             banner={banner}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                            href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                             variant={variantRounded}
                         />
                     </SwiperSlide>

@@ -60,7 +60,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
         return (
             <div className={className}>
                 {labelKey && (
-                    <label htmlFor={name} className="mb-3 block cursor-pointer text-sm leading-none text-gray-600">
+                    <label htmlFor={name} className="block mb-3 text-sm leading-none text-gray-600 cursor-pointer">
                         {t(labelKey)}
                     </label>
                 )}

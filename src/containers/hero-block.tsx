@@ -4,7 +4,7 @@ import { useWindowSize } from '@/hooks/use-window-size';
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import { homeOneHeroBanner as banners } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 const breakpoints = {
@@ -36,7 +36,7 @@ const HeroBlock = () => {
             >
                 {banners?.map((banner: any) => (
                     <SwiperSlide className="carouselItem px-0 2xl:px-3.5" key={`banner--key-${banner?.id}`}>
-                        <BannerCard banner={banner} href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`} />
+                        <BannerCard banner={banner} href={`${ROUTES.COLLECTIONS}/${banner.slug}`} />
                     </SwiperSlide>
                 ))}
             </CarouselTemplate>

@@ -50,25 +50,25 @@ const DownloadApps: React.FC<Props> = ({ className, variant, disableBorderRadius
                 className
             )}
         >
-            <div className="w-full flex-shrink-0 pb-5 sm:w-60 md:w-96 md:pb-8 lg:flex lg:w-auto lg:max-w-lg lg:items-center lg:pb-12 xl:max-w-xl xl:pb-16">
+            <div className="flex-shrink-0 w-full pb-5 sm:w-60 md:w-96 md:pb-8 lg:flex lg:w-auto lg:max-w-lg lg:items-center lg:pb-12 xl:max-w-xl xl:pb-16">
                 <div className="py-4 text-center ltr:sm:text-left rtl:sm:text-right md:py-6 xl:py-8">
                     <Text variant="mediumHeading" className="-mt-1 mb-2 md:mb-3 lg:mb-3.5 xl:mb-4">
                         {t(`${title}`)}
                     </Text>
                     {hasMounted && (
                         <h2
-                            className="text-md mb-6 font-normal leading-7 text-heading sm:text-xl sm:leading-8 md:mb-8 md:text-3xl md:leading-snug lg:mb-9 ltr:lg:pr-20 rtl:lg:pl-20 xl:mb-12 xl:text-4xl xl:leading-relaxed 2xl:mb-14 2xl:text-5xl 2xl:leading-snug ltr:2xl:pr-0 rtl:2xl:pl-0"
+                            className="mb-6 font-normal leading-7 text-md text-heading sm:text-xl sm:leading-8 md:mb-8 md:text-3xl md:leading-snug lg:mb-9 ltr:lg:pr-20 rtl:lg:pl-20 xl:mb-12 xl:text-4xl xl:leading-relaxed 2xl:mb-14 2xl:text-5xl 2xl:leading-snug ltr:2xl:pr-0 rtl:2xl:pl-0"
                             dangerouslySetInnerHTML={{
                                 __html: t(`${subTitle}`),
                             }}
                         />
                     )}
-                    <div className="flex justify-center gap-x-2 px-6 sm:justify-start sm:px-0 md:gap-x-3">
+                    <div className="flex justify-center px-6 gap-x-2 sm:justify-start sm:px-0 md:gap-x-3">
                         {appButtons?.map((item) => (
                             <Link
                                 key={item.id}
                                 href={item.slug}
-                                className="hover:box-shadow inline-flex transition duration-200 ease-in hover:opacity-80"
+                                className="inline-flex transition duration-200 ease-in hover:box-shadow hover:opacity-80"
                             >
                                 <img
                                     src={item.appButton}

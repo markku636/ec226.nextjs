@@ -5,7 +5,7 @@ import { setPopupModalData, updateCookieBarSettings } from '@/redux/reducer/ui/u
 import CustomButton from '@components/ui/button/custom-button';
 import { TableProps } from '@components/ui/table';
 import cn from '@utils/classname/cn';
-import { Routes } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import Cookies from 'js-cookie';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -169,7 +169,7 @@ export default function CookieSettingsPopup() {
                     a: (chunks) => (
                         <Link
                             className="text-blue-coolpcLink hover:underline hover:text-blue-coolpcLink"
-                            href={Routes.Policy}
+                            href={ROUTES.Policy}
                         >
                             {chunks}
                         </Link>

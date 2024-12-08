@@ -24,6 +24,8 @@ export interface IMenu {
     id: number;
     titleLang: string;
     link: string;
+    columns: any[];
+    subMenu: ISubMenu[];
 }
 
 export interface ISubMenu {

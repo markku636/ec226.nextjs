@@ -1,7 +1,7 @@
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import { homeHeroGridSlider as banners } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface HeroGridProps {
@@ -42,11 +42,7 @@ const HeroGridCarousel: React.FC<HeroGridProps> = ({ className = 'mb-12 md:mb-14
             >
                 {banners?.map((banner) => (
                     <SwiperSlide key={`hero-banner-grid--key-${banner.id}`}>
-                        <BannerCard
-                            banner={banner}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
-                            effectActive={true}
-                        />
+                        <BannerCard banner={banner} href={`${ROUTES.COLLECTIONS}/${banner.slug}`} effectActive={true} />
                     </SwiperSlide>
                 ))}
             </CarouselTemplate>

@@ -8,7 +8,7 @@ import Button from '@components/ui/button';
 import usePrice from '@framework/product/use-price';
 import { getVariations } from '@framework/utils/get-variations';
 import { generateCartItem } from '@utils/generate-cart-item';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import isEmpty from 'lodash/isEmpty';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -56,7 +56,7 @@ export default function ProductPopup() {
 
     function navigateToProductPage() {
         dispatch(closeModal());
-        router.push(`${TEMPLATE_ROUTES.PRODUCT}/${slug}`, undefined, {
+        router.push(`${ROUTES.PRODUCT}/${slug}`, undefined, {
             locale: router.locale,
         });
     }

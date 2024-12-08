@@ -42,10 +42,10 @@ export default function Newsletter() {
                             alt="Thumbnail"
                             width={655}
                             height={655}
-                            className="h-full w-full object-cover"
+                            className="object-cover w-full h-full"
                         />
                     </div>
-                    <div className="flex w-full flex-col px-5 py-7 text-center sm:p-10 md:p-12 xl:p-14">
+                    <div className="flex flex-col w-full px-5 text-center py-7 sm:p-10 md:p-12 xl:p-14">
                         <h4 className="mb-2 text-xs font-semibold uppercase text-body sm:text-sm lg:mb-4">
                             {t('common:text-subscribe-now')}
                         </h4>
@@ -55,23 +55,23 @@ export default function Newsletter() {
                         <p className="text-sm leading-6 text-body md:leading-7">
                             {t('common:text-newsletter-subtitle')}
                         </p>
-                        <form className="mb-1 pt-8 sm:mb-0 sm:pt-10 md:pt-14" onSubmit={handleSubmit(onSubmit)}>
+                        <form className="pt-8 mb-1 sm:mb-0 sm:pt-10 md:pt-14" onSubmit={handleSubmit(onSubmit)}>
                             <Input
-                                placeholderKey="forms:placeholder-email-subscribe"
+                                placeholderKey="placeholder-email-subscribe"
                                 type="email"
                                 variant="solid"
                                 className="w-full"
                                 inputClassName="px-4 lg:px-7 h-12 lg:h-14 text-center bg-gray-50"
                                 {...register('email', {
-                                    required: 'forms:email-required',
+                                    required: 'email-required',
                                     pattern: {
                                         value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                        message: 'forms:email-error',
+                                        message: 'email-error',
                                     },
                                 })}
                                 errorKey={errors.email?.message}
                             />
-                            <Button className="mt-3 h-12 w-full sm:mt-4 lg:h-14">{t('common:button-subscribe')}</Button>
+                            <Button className="w-full h-12 mt-3 sm:mt-4 lg:h-14">{t('button-subscribe')}</Button>
                         </form>
                     </div>
                 </div>

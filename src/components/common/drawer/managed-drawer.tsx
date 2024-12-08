@@ -1,17 +1,17 @@
 'use client';
+import usePageLocale from '@/hooks/use-locale';
 import { useAppDispatch, useAppSelector } from '@/redux/reducer/hooks';
 import { closeCart, selectUI } from '@/redux/reducer/ui/ui-slice';
 
 import { Drawer } from '@components/common/drawer/drawer';
 import motionProps from '@components/common/drawer/motion';
 import { getDirection } from '@utils/get-direction';
-import { useRouter } from 'next/navigation';
 
 const ManagedDrawer = () => {
     const { displayCart } = useAppSelector(selectUI);
     const dispatch = useAppDispatch();
-    const { locale } = useRouter();
-    const dir = getDirection(locale);
+
+    const dir = getDirection(usePageLocale());
     const contentWrapperCSS = dir === 'ltr' ? { right: 0 } : { left: 0 };
 
     return (

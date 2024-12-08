@@ -5,8 +5,8 @@ import React from 'react';
 
 interface MenuItem {
     id: number | string;
-    path: string;
-    label: string;
+    link: string;
+    titleLang: string;
     columnItemItems?: MenuItem[];
 }
 type MegaMenuProps = {
@@ -20,18 +20,18 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
     const t = useTranslations('menu');
 
     return (
-        <div className="megaMenu absolute bg-gray-200 py-7 shadow-header ltr:-left-28 rtl:-right-28 ltr:xl:left-0 rtl:xl:right-0 ">
+        <div className="absolute bg-gray-200 megaMenu py-7 shadow-header ltr:-left-28 rtl:-right-28 ltr:xl:left-0 rtl:xl:right-0 ">
             <div className="grid grid-cols-5">
                 {columns?.map((column) => (
-                    <ul className="pb-7 pt-6 even:bg-gray-150 2xl:pb-8 2xl:pt-7" key={column.id}>
+                    <ul className="pt-6 pb-7 even:bg-gray-150 2xl:pb-8 2xl:pt-7" key={column.id}>
                         {column?.columnItems?.map((columnItem) => (
                             <React.Fragment key={columnItem.id}>
                                 <li className="mb-1.5">
                                     <Link
-                                        href={columnItem.path}
+                                        href={columnItem.link}
                                         className="block px-5 py-1.5 text-sm font-semibold text-heading hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
                                     >
-                                        {t(columnItem.label)}
+                                        {t(columnItem.titleLang)}
                                     </Link>
                                 </li>
                                 {columnItem?.columnItemItems?.map((item: any) => (
@@ -44,10 +44,10 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
                                         }
                                     >
                                         <Link
-                                            href={item.path}
+                                            href={item.link}
                                             className="block px-5 py-1.5 text-sm text-body hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
                                         >
-                                            {t(item.label)}
+                                            {t(item.titleLang)}
                                         </Link>
                                     </li>
                                 ))}

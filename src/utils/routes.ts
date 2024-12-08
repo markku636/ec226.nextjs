@@ -1,4 +1,4 @@
-export enum Routes {
+export enum ROUTES {
     Home = '/',
     Login = '/login',
     Register = '/register',
@@ -12,9 +12,7 @@ export enum Routes {
     Terms = '/legal/terms',
     Product = '/products',
     Checkout = '/checkout',
-}
-
-export enum TEMPLATE_ROUTES {
+    // templates
     HOME = '/',
     PRODUCT = '/products',
     CHECKOUT = '/checkout',

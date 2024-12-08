@@ -3,7 +3,7 @@ import BannerCard from '@components/common/banner-card';
 import SellWithProgress from '@components/common/sale-with-progress';
 import Alert from '@components/ui/alert';
 import { useFlashSaleProductsQuery } from '@framework/product/get-all-flash-sale-products';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import classNames from 'classnames';
 
 interface Props {
@@ -56,7 +56,7 @@ const FlashSaleBlock: React.FC<Props> = ({ className = 'mb-12 lg:mb-14 xl:mb-7' 
             <BannerCard
                 key={`banner--key${banner.id}`}
                 banner={banner}
-                href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                 className="xl:col-span-2 xl:h-full"
                 effectActive={true}
             />

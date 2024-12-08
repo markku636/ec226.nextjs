@@ -11,6 +11,7 @@ import { Product } from '@framework/types';
 import { useAppDispatch } from '@/redux/reducer/hooks';
 import { openModal, setModalData, setModalView } from '@/redux/reducer/ui/ui-slice';
 
+import RatingDisplay from '@components/common/rating-display';
 import ProductCompareIcon from '@components/icons/product-compare-icon';
 import ProductViewIcon from '@components/icons/product-view-icon';
 import ProductWishIcon from '@components/icons/product-wish-icon';

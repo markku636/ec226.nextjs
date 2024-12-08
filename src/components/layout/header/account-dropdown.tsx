@@ -6,7 +6,7 @@ import { useAppDispatch } from '@/redux/reducer/hooks';
 import { closeHeaderModal, useSelectUI } from '@/redux/reducer/ui/ui-slice';
 import { IAccountDropdown } from '@/typing/layout';
 import cn from '@utils/classname/cn';
-import { Routes } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -25,7 +25,7 @@ export default function AccountDropdown({ accountDropdown, className = '' }: Rea
         localStorage.removeItem(LocalStorageKeys.AccessToken);
         dispatch(updateAddressFields(DEFAULT_ADDRESS_FIELDS));
         dispatch(closeHeaderModal());
-        router.push(Routes.Home);
+        router.push(ROUTES.Home);
     };
 
     if (headerModalView !== 'ACCOUNT') {
@@ -40,7 +40,7 @@ export default function AccountDropdown({ accountDropdown, className = '' }: Rea
             )}
         >
             <Link
-                href={Routes.SupportOrderStatus}
+                href={ROUTES.SupportOrderStatus}
                 className="w-full px-2 py-3 whitespace-nowrap hover:cursor-pointer hover:bg-gray-coolpc"
             >
                 {orderStatusTextLang}

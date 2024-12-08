@@ -8,7 +8,7 @@ import ProductCardListSmallLoader from '@components/ui/loaders/product-card-smal
 import { useOnSellingProductsQuery } from '@framework/product/get-all-on-selling-products';
 import { homeThreeProductsBanner as banner } from '@framework/static/banner';
 import { Product } from '@framework/types';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 
 interface ProductsProps {
     sectionHeading: string;
@@ -37,14 +37,14 @@ const BannerWithProducts: React.FC<ProductsProps> = ({
                     {variant === 'reverse' ? (
                         <BannerCard
                             banner={banner[1]}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner[1].slug}`}
+                            href={`${ROUTES.COLLECTIONS}/${banner[1].slug}`}
                             className="hidden 3xl:block"
                             effectActive={true}
                         />
                     ) : (
                         <BannerCard
                             banner={banner[0]}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner[0].slug}`}
+                            href={`${ROUTES.COLLECTIONS}/${banner[0].slug}`}
                             className="hidden 3xl:block"
                             effectActive={true}
                         />

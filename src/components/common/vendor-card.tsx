@@ -1,7 +1,7 @@
 'use client';
 import { useTranslationsCommon } from '@/hooks/translations/use-translation-hooks';
 import Link from '@components/ui/link';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import cn from 'classnames';
 import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -18,7 +18,7 @@ const VendorCard: React.FC<VendorCardProps> = ({ shop, variant = 'list' }) => {
 
     return (
         <Link
-            href={`${TEMPLATE_ROUTES.SHOPS}/${slug}`}
+            href={`${ROUTES.SHOPS}/${slug}`}
             className={cn(
                 'relative flex cursor-pointer items-center rounded-md bg-white px-5 shadow-vendorCard transition-all hover:shadow-vendorCardHover lg:px-6',
                 {

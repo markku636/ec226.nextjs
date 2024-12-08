@@ -4,7 +4,7 @@ import { useWindowSize } from '@/hooks/use-window-size';
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import { saleBannerGrid } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 const breakpoints = {
@@ -47,7 +47,7 @@ const SaleBannerGrid: React.FC<BannerProps> = ({
                             <SwiperSlide key={banner.id}>
                                 <BannerCard
                                     banner={banner}
-                                    href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                                    href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                                     className="h-full"
                                     effectActive={true}
                                 />
@@ -61,7 +61,7 @@ const SaleBannerGrid: React.FC<BannerProps> = ({
                         <BannerCard
                             key={banner.id}
                             banner={banner}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                            href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                             className={banner.type === 'large' ? 'col-span-2' : 'col-span-1'}
                             effectActive={true}
                         />

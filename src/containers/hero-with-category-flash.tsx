@@ -10,7 +10,7 @@ import CategoryListCardLoader from '@components/ui/loaders/category-list-card-lo
 import { useCategoriesQuery } from '@framework/category/get-all-categories';
 import { useFlashSaleProductsQuery } from '@framework/product/get-all-flash-sale-products';
 import { homeFourGridBanners as banners } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface Props {
@@ -41,7 +41,7 @@ const HeroWithCategoryFlash: React.FC<Props> = ({ className = 'mb-12 md:mb-14 xl
                     <BannerCard
                         key={`banner--key${banner.id}`}
                         banner={banner}
-                        href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                        href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                         className={banner.type === 'large' ? 'col-span-2' : 'col-span-1'}
                     />
                 ))}

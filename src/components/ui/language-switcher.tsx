@@ -2,7 +2,7 @@
 import { ILanguageMenu } from '@/typing/layout';
 import { Listbox, Transition } from '@headlessui/react';
 import { addActiveScroll } from '@utils/add-active-scroll';
-import { Routes } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { getRedirectedPathName } from '@utils/utl-helper';
 import { useParams, usePathname } from 'next/navigation';
 import { Fragment, useRef, useState } from 'react';
@@ -36,7 +36,7 @@ export default function LanguageSwitcher({ languageMenu }: Readonly<ILanguagePro
         location.href = redirctUrl;
     }
 
-    if (pathname?.endsWith(Routes.Carts)) {
+    if (pathname?.endsWith(ROUTES.Carts)) {
         return null;
     }
 

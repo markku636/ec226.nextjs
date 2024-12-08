@@ -8,7 +8,7 @@ import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import CategoryListCardLoader from '@components/ui/loaders/category-list-card-loader';
 import CategoryListFeedLoader from '@components/ui/loaders/category-list-feed-loader';
 import { useCategoriesQuery } from '@framework/category/get-all-categories';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface Props {
@@ -102,7 +102,7 @@ const HeroWithCategory: React.FC<Props> = ({
                         <SwiperSlide key={`banner--key${banner.id}`}>
                             <BannerCard
                                 banner={banner}
-                                href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                                href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                                 className="xl:h-full"
                             />
                         </SwiperSlide>

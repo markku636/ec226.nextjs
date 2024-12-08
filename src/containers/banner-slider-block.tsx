@@ -2,7 +2,7 @@
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import { promotionBanner } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface BannerProps {
@@ -37,7 +37,7 @@ const BannerSliderBlock: React.FC<BannerProps> = ({ className = 'mb-12 md:mb-14 
                             <BannerCard
                                 banner={banner}
                                 effectActive={true}
-                                href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                                href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                             />
                         </SwiperSlide>
                     ))}

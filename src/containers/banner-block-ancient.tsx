@@ -4,7 +4,7 @@ import { useWindowSize } from '@/hooks/use-window-size';
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
 import { ancientBanner1, ancientBanner2 } from '@framework/static/banner';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 interface BannerProps {
@@ -51,7 +51,7 @@ const BannerBlockAncient: React.FC<BannerProps> = ({
                             <SwiperSlide key={`banner--key${banner.id}`}>
                                 <BannerCard
                                     banner={banner}
-                                    href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                                    href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                                     className={'h-full'}
                                 />
                             </SwiperSlide>
@@ -68,7 +68,7 @@ const BannerBlockAncient: React.FC<BannerProps> = ({
                         <BannerCard
                             key={`banner--key${banner.id}`}
                             banner={banner}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
+                            href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
                             className={
                                 banner.type === 'large' || (largeFirst && banner.id === (1 || '1'))
                                     ? 'col-span-2'

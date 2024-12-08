@@ -1,7 +1,7 @@
 'use client';
 import BannerCard from '@components/common/banner-card';
 import CarouselTemplate from '@components/ui/carousel/carousel-template';
-import { TEMPLATE_ROUTES } from '@utils/routes';
+import { ROUTES } from '@utils/routes';
 import { SwiperSlide } from 'swiper/react';
 
 const breakpoints = {
@@ -33,11 +33,7 @@ const BannerCarouselBlock: React.FC<BannerProps> = ({
             <CarouselTemplate breakpoints={breakpoints} autoplay={{ delay: 5000 }}>
                 {bannerData?.map((banner: any) => (
                     <SwiperSlide key={`promotion-banner-key-${banner?.id}`}>
-                        <BannerCard
-                            banner={banner}
-                            href={`${TEMPLATE_ROUTES.COLLECTIONS}/${banner.slug}`}
-                            effectActive={true}
-                        />
+                        <BannerCard banner={banner} href={`${ROUTES.COLLECTIONS}/${banner.slug}`} effectActive={true} />
                     </SwiperSlide>
                 ))}
             </CarouselTemplate>
