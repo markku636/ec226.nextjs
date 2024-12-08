@@ -11,7 +11,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
         <li className={cn(!hasMegaMenu ? 'group relative' : '')}>
             <Link
                 href={data.link}
-                className="flex items-center py-2 hover:bg-gray-100 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
+                className="flex items-center py-2 hover:bg-gray-200 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
             >
                 {data.icon && <span className="inline-flex ltr:mr-2 rtl:ml-2">{data.icon}</span>}
                 {data.titleLang}
@@ -33,13 +33,13 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
                                 <Link
                                     href={brand.link}
                                     key={brand.id}
-                                    className="bg-gray-100 border border-gray-300 rounded-md"
+                                    className="bg-gray-100 border border-gray-200 rounded-md"
                                 >
                                     <Image src={brand.icon.src} height={60} width={150} alt={brand.titleLang} />
                                 </Link>
                             ))}
                         </div>
-                        <div className="grid grid-cols-2 gap-3 p-6 border-t border-gray-300 2xl:px-7 2xl:py-8 ">
+                        <div className="grid grid-cols-2 gap-3 p-6 border-t border-gray-200 2xl:px-7 2xl:py-8 ">
                             {hasBanners.map((banner: any) => (
                                 <Link href={banner.link} key={banner.id}>
                                     <img className="" src={banner.image.src} alt={banner.titleLang} />

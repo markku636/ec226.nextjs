@@ -21,7 +21,7 @@ const Copyright: React.FC<CopyrightProps> = ({ payment, variant }) => {
     const t = useTranslations('footer');
 
     return (
-        <div className="mb-2 border-t border-gray-300 pb-16 pt-5 sm:mb-0 sm:pb-20 md:pb-5">
+        <div className="mb-2 border-t border-gray-200 pb-16 pt-5 sm:mb-0 sm:pb-20 md:pb-5">
             <Container
                 className={cn('flex flex-col-reverse text-center md:flex-row md:justify-between', {
                     'items-center': variant === 'contemporary',

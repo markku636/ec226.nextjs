@@ -19,7 +19,7 @@ const TextInformation: React.FC<Props> = ({ item, className }) => {
     return (
         <div
             className={classNames(
-                `border-gray-300 px-4 text-center sm:px-2.5 xl:border-l xl:py-12 xl:first:border-s-0 2xl:px-8 3xl:px-12`,
+                `border-gray-200 px-4 text-center sm:px-2.5 xl:border-l xl:py-12 xl:first:border-s-0 2xl:px-8 3xl:px-12`,
                 className
             )}
         >

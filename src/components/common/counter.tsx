@@ -25,7 +25,7 @@ const Counter: FC<CounterProps> = ({
     return (
         <div
             className={cn('group flex flex-shrink-0 items-center justify-between overflow-hidden rounded-md', {
-                'h-11 border border-gray-300 md:h-12': variant === 'default',
+                'h-11 border border-gray-200 md:h-12': variant === 'default',
                 'h-8 bg-heading shadow-navigation md:h-9': variant === 'dark',
             })}
         >
@@ -34,7 +34,7 @@ const Counter: FC<CounterProps> = ({
                 className={cn(
                     'flex h-full flex-shrink-0 items-center justify-center transition duration-300 ease-in-out focus:outline-none',
                     {
-                        'w-10 border-e border-gray-300 text-heading hover:bg-heading hover:text-white md:w-12':
+                        'w-10 border-e border-gray-200 text-heading hover:bg-heading hover:text-white md:w-12':
                             variant === 'default',
                         'w-8 bg-heading text-white hover:bg-gray-600 focus:outline-none md:w-9': variant === 'dark',
                     }
@@ -59,7 +59,7 @@ const Counter: FC<CounterProps> = ({
                 className={cn(
                     'flex h-full flex-shrink-0 items-center justify-center transition duration-300 ease-in-out focus:outline-none',
                     {
-                        'w-10 border-s border-gray-300 text-heading hover:bg-heading hover:text-white md:w-12':
+                        'w-10 border-s border-gray-200 text-heading hover:bg-heading hover:text-white md:w-12':
                             variant === 'default',
                         'w-8 bg-heading text-white hover:bg-gray-600 focus:outline-none md:w-9': variant === 'dark',
                     }

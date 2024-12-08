@@ -9,8 +9,8 @@ export const CheckoutItem: React.FC<{ item: Item }> = ({ item }) => {
         currencyCode: 'USD',
     });
     return (
-        <div className="flex items-center border-b border-gray-300 py-4 lg:px-3">
-            <div className="flex h-16 w-16 flex-shrink-0 rounded-md border border-gray-300">
+        <div className="flex items-center border-b border-gray-200 py-4 lg:px-3">
+            <div className="flex h-16 w-16 flex-shrink-0 rounded-md border border-gray-200">
                 <img
                     src={item.image ?? '/assets/placeholder/order-product.svg'}
                     width="64"

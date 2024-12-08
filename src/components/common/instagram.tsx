@@ -73,7 +73,7 @@ const Instagram: React.FC<Props> = ({ className = '', variant, disableContainerB
                         alt={t(`${item.title}`) || t('text-instagram-thumbnail')}
                         width={300}
                         height={300}
-                        className={cn('bg-gray-300 object-cover', {
+                        className={cn('bg-gray-200 object-cover', {
                             'rounded-md': variant === 'rounded',
                         })}
                     />

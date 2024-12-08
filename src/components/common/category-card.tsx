@@ -13,7 +13,7 @@ const CategoryCard: React.FC<Props> = ({ category }) => {
     const { name, products } = category;
     const t = useTranslationsCommon();
     return (
-        <div className="flex flex-col rounded-lg border border-gray-300 p-4 lg:p-5 xl:p-7">
+        <div className="flex flex-col rounded-lg border border-gray-200 p-4 lg:p-5 xl:p-7">
             <Text variant="heading" className="-mt-0.5 mb-2.5 capitalize lg:-mt-1 lg:mb-3.5 xl:-mt-0">
                 {name}
             </Text>
@@ -26,7 +26,7 @@ const CategoryCard: React.FC<Props> = ({ category }) => {
                                 alt={name || t('text-category-thumbnail')}
                                 width={165}
                                 height={165}
-                                className="transform rounded-md bg-gray-300 object-cover transition duration-300 ease-in-out hover:scale-110"
+                                className="transform rounded-md bg-gray-200 object-cover transition duration-300 ease-in-out hover:scale-110"
                             />
                         </div>
                     </Link>

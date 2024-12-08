@@ -16,7 +16,7 @@ export default function TermsPage() {
     return (
         <>
             <PageHeader pageHeader="text-page-terms-of-service" />
-            <div className="mt-12 border-b border-gray-300 px-4 pb-9 md:px-10 md:pb-14 lg:mt-14 lg:px-7 lg:py-1 lg:pb-16 xl:mt-16 xl:px-16 xl:py-0 2xl:px-24 2xl:pb-20 3xl:px-32 3xl:pb-24">
+            <div className="mt-12 border-b border-gray-200 px-4 pb-9 md:px-10 md:pb-14 lg:mt-14 lg:px-7 lg:py-1 lg:pb-16 xl:mt-16 xl:px-16 xl:py-0 2xl:px-24 2xl:pb-20 3xl:px-32 3xl:pb-24">
                 <Container>
                     <div className="flex flex-col md:flex-row">
                         <nav className="mb-8 md:mb-0 md:w-72 xl:w-3/12">

@@ -38,7 +38,7 @@ export default function ListBox({ options }: { options: Option[] }) {
         <Listbox value={selectedItem} onChange={handleItemClick}>
             {({ open }) => (
                 <div className="relative z-10 min-w-[180px] ltr:ml-2 rtl:mr-2 ltr:lg:ml-0 rtl:lg:mr-0">
-                    <Listbox.Button className="relative w-full  cursor-pointer rounded-lg border border-gray-300  bg-white py-2 text-[13px] font-semibold text-heading shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 ltr:pl-3 ltr:pr-10 ltr:text-left rtl:pl-10 rtl:pr-3 rtl:text-right sm:text-sm md:text-sm">
+                    <Listbox.Button className="relative w-full  cursor-pointer rounded-lg border border-gray-200  bg-white py-2 text-[13px] font-semibold text-heading shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 ltr:pl-3 ltr:pr-10 ltr:text-left rtl:pl-10 rtl:pr-3 rtl:text-right sm:text-sm md:text-sm">
                         <span className="block truncate">{t(selectedItem.name)}</span>
                         <span className="pointer-events-none absolute inset-y-0 flex items-center ltr:right-0 ltr:pr-2 rtl:left-0 rtl:pl-2">
                             <HiOutlineSelector className="h-5 w-5 text-gray-400" aria-hidden="true" />

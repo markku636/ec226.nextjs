@@ -7,7 +7,7 @@ const ErrorInformation = () => {
     // const t = useTranslationCommon();
 
     return (
-        <div className="flex items-center justify-center border-b border-t border-gray-300 px-16 py-16 text-center sm:py-20 lg:py-24 xl:py-32">
+        <div className="flex items-center justify-center border-b border-t border-gray-200 px-16 py-16 text-center sm:py-20 lg:py-24 xl:py-32">
             <div>
                 <Image src="/assets/images/404.svg" alt={'error-heading'} width={822} height={492} />
 

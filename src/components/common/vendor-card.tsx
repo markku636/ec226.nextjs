@@ -35,7 +35,7 @@ const VendorCard: React.FC<VendorCardProps> = ({ shop, variant = 'list' }) => {
 
             <div
                 className={cn(
-                    'relative flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-gray-100 bg-gray-300',
+                    'relative flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full border border-gray-100 bg-gray-200',
                     {
                         'h-24 w-24 lg:h-28 lg:w-28': variant === 'grid',
                         'h-16 w-16': variant === 'list',

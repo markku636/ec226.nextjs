@@ -198,7 +198,7 @@ export default function CookieSettingsPopup() {
                                             onChange={() => handleOnChange(id)}
                                             checked={checked}
                                         />
-                                        <span className="absolute inset-0 transition-all duration-300 ease-in bg-gray-300 slider round"></span>
+                                        <span className="absolute inset-0 transition-all duration-300 ease-in bg-gray-200 slider round"></span>
                                     </label>
                                 </div>
                             )}

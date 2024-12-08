@@ -44,7 +44,7 @@ export default function BannerCard({
                     height={selectedImage.height}
                     alt={title}
                     quality={100}
-                    className={cn('w-full bg-gray-300 object-cover', {
+                    className={cn('w-full bg-gray-200 object-cover', {
                         'rounded-md': variant === 'rounded' && !disableBorderRadius,
                     })}
                 />

@@ -16,7 +16,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
     placeholderKey?: string;
 }
 const classes = {
-    root: 'w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out pt-6 pb-2 pr-12 pl-2.5 bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12 rounded-md',
+    root: 'w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12 transition duration-200 ease-in-out pt-6 pb-2 pr-12 pl-2.5 bg-white border-gray-200 focus:outline-none focus:border-heading h-11 md:h-12 rounded-md',
 };
 const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
     (

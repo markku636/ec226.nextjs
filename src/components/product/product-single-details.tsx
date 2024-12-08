@@ -124,7 +124,7 @@ const ProductSingleDetails = () => {
             )}
 
             <div className="col-span-4 pt-8 lg:pt-0">
-                <div className="mb-7 border-b border-gray-300 pb-7">
+                <div className="mb-7 border-b border-gray-200 pb-7">
                     <h2 className="mb-3.5 text-lg font-bold text-heading hover:text-black md:text-xl lg:text-2xl 2xl:text-3xl">
                         {data?.name}
                     </h2>
@@ -141,7 +141,7 @@ const ProductSingleDetails = () => {
                     </div>
                 </div>
 
-                <div className="border-b border-gray-300 pb-3">
+                <div className="border-b border-gray-200 pb-3">
                     {Object.keys(variations).map((variation) => {
                         return (
                             <ProductAttributes
@@ -154,7 +154,7 @@ const ProductSingleDetails = () => {
                         );
                     })}
                 </div>
-                <div className="flex items-center gap-x-4 border-b border-gray-300 py-8 ltr:md:pr-32 rtl:md:pl-32 ltr:lg:pr-12 rtl:lg:pl-12 ltr:2xl:pr-32  rtl:2xl:pl-32 ltr:3xl:pr-48 rtl:3xl:pl-48">
+                <div className="flex items-center gap-x-4 border-b border-gray-200 py-8 ltr:md:pr-32 rtl:md:pl-32 ltr:lg:pr-12 rtl:lg:pl-12 ltr:2xl:pr-32  rtl:2xl:pl-32 ltr:3xl:pr-48 rtl:3xl:pl-48">
                     <Counter
                         quantity={quantity}
                         onIncrement={() => setQuantity((prev) => prev + 1)}

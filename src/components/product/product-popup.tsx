@@ -78,7 +78,7 @@ export default function ProductPopup() {
     return (
         <div className="rounded-lg bg-white">
             <div className="mx-auto flex w-full flex-col overflow-hidden md:w-[650px] lg:w-[960px] lg:flex-row">
-                <div className="flex max-h-430px w-full flex-shrink-0 items-center justify-center overflow-hidden bg-gray-300 lg:max-h-full lg:w-430px">
+                <div className="flex max-h-430px w-full flex-shrink-0 items-center justify-center overflow-hidden bg-gray-200 lg:max-h-full lg:w-430px">
                     <img
                         src={image?.original ?? '/assets/placeholder/products/product-thumbnail.svg'}
                         alt={name}
@@ -141,7 +141,7 @@ export default function ProductPopup() {
                         {viewCartBtn && (
                             <button
                                 onClick={navigateToCartPage}
-                                className="mb-4 h-11 w-full rounded border border-gray-300 bg-gray-100 text-heading transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none md:h-12"
+                                className="mb-4 h-11 w-full rounded border border-gray-200 bg-gray-100 text-heading transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none md:h-12"
                             >
                                 {t('text-view-cart')}
                             </button>

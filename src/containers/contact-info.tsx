@@ -32,13 +32,13 @@ interface Props {
 const ContactInfoBlock: FC<Props> = () => {
     const t = useTranslationsCommon();
     return (
-        <div className="mb-6 border-gray-300 lg:rounded-md lg:border lg:p-7">
+        <div className="mb-6 border-gray-200 lg:rounded-md lg:border lg:p-7">
             <h4 className="-mt-1 pb-7 text-2xl font-bold text-heading md:pb-10 md:text-lg lg:pb-6">
                 {t('text-find-us-here')}
             </h4>
             {data?.map((item: any) => (
                 <div key={`contact--key${item.id}`} className="flex pb-7">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1.5">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md border border-gray-200 p-1.5">
                         {item.icon}
                     </div>
                     <div className="flex flex-col ltr:pl-3 rtl:pr-3 ltr:2xl:pl-4 rtl:2xl:pr-4">

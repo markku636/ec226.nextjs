@@ -48,7 +48,7 @@ const LoginForm = () => {
         dispatch(openModal());
     }
     return (
-        <div className="mx-auto w-full overflow-hidden rounded-lg border border-gray-300 bg-white px-5 py-5 sm:w-96 sm:px-8 md:w-450px">
+        <div className="mx-auto w-full overflow-hidden rounded-lg border border-gray-200 bg-white px-5 py-5 sm:w-96 sm:px-8 md:w-450px">
             <div className="mb-6 pt-2.5 text-center">
                 <div onClick={() => dispatch(closeModal())}>
                     <Logo />
@@ -118,7 +118,7 @@ const LoginForm = () => {
                 </div>
             </form>
             <div className="relative mb-3.5 mt-6 flex flex-col items-center justify-center text-sm text-heading">
-                <hr className="w-full border-gray-300" />
+                <hr className="w-full border-gray-200" />
                 <span className="absolute -top-2.5 bg-white px-2">{t('common:text-or')}</span>
             </div>
             <Button

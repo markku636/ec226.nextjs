@@ -124,7 +124,7 @@ const ProductCard: FC<ProductProps> = ({
                     loading={imgLoading}
                     quality={100}
                     alt={product?.name || 'Product Image'}
-                    className={cn(`bg-gray-300 object-cover ${!disableBorderRadius && 'rounded-s-md'}`, {
+                    className={cn(`bg-gray-200 object-cover ${!disableBorderRadius && 'rounded-s-md'}`, {
                         'w-full transition duration-200 ease-in':
                             variant === 'grid' ||
                             variant === 'gridModern' ||

@@ -31,7 +31,7 @@ const CollectionTopBar = () => {
                 {collectionTitle}
             </Text>
             <button
-                className="flex items-center px-4 py-2 text-sm font-semibold transition duration-200 ease-in-out border border-gray-300 rounded-md text-heading hover:bg-gray-100 focus:outline-none lg:hidden"
+                className="flex items-center px-4 py-2 text-sm font-semibold transition duration-200 ease-in-out border border-gray-200 rounded-md text-heading hover:bg-gray-100 focus:outline-none lg:hidden"
                 onClick={() => dispatch(openFilter())}
             >
                 <MdCollectionsBookmark className="text-lg" />

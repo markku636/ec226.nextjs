@@ -26,7 +26,7 @@ const CategoryListCard: React.FC<Props> = ({ category }) => {
                         alt={name || t('text-category-thumbnail')}
                         width={60}
                         height={60}
-                        className="rounded-full bg-gray-300 object-cover"
+                        className="rounded-full bg-gray-200 object-cover"
                     />
                 </div>
                 <h3 className="text-sm capitalize text-heading ltr:pl-2.5 rtl:pr-2.5 md:text-base ltr:md:pl-4 rtl:md:pr-4 2xl:text-sm ltr:2xl:pl-3 rtl:2xl:pr-3 3xl:text-base ltr:3xl:pl-4 rtl:3xl:pr-4 ">

@@ -78,7 +78,7 @@ export default function Search() {
                                 <Scrollbar className="os-host-flexbox">
                                     <div className="h-full">
                                         {isLoading ? (
-                                            <div className="border-b border-gray-300 border-opacity-30 p-5 last:border-b-0">
+                                            <div className="border-b border-gray-200 border-opacity-30 p-5 last:border-b-0">
                                                 {Array.from({ length: 5 }).map((_, idx) => (
                                                     <SearchResultLoader key={idx} uniqueKey={`top-search-${idx}`} />
                                                 ))}

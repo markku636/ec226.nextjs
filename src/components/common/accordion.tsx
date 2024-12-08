@@ -43,7 +43,7 @@ export const Collapse: React.FC<CollapseProps> = ({
                 onClick={() => setExpanded(isOpen ? false : i)}
                 className={cn('cursor-pointer flex items-center justify-between transition-colors py-5 md:py-6', {
                     'px-6 md:px-8 lg:px-10': variant === 'gray',
-                    'border-t border-gray-300': variant === 'transparent',
+                    'border-t border-gray-200': variant === 'transparent',
                 })}
             >
                 <h2
@@ -68,7 +68,7 @@ export const Collapse: React.FC<CollapseProps> = ({
                     <motion.div key="content" initial="from" animate="to" exit="from" variants={heightCollapse()}>
                         <div
                             className={cn('pb-6 md:pb-7 leading-7 text-sm text-gray-600', {
-                                'pt-5 border-t border-gray-300 px-6 md:px-8 lg:px-10': variant === 'gray',
+                                'pt-5 border-t border-gray-200 px-6 md:px-8 lg:px-10': variant === 'gray',
                             })}
                         >
                             {contentKey ? t(contentKey) : content}

@@ -13,7 +13,7 @@ export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(({ lab
             <label className="cursor-pointer flex">
                 <input
                     type="checkbox"
-                    className="form-checkbox h-5 w-5 cursor-pointer rounded border border-gray-300 transition duration-500 ease-in-out checked:bg-heading hover:border-heading checked:hover:bg-heading focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:bg-heading focus-visible:outline-none"
+                    className="form-checkbox h-5 w-5 cursor-pointer rounded border border-gray-200 transition duration-500 ease-in-out checked:bg-heading hover:border-heading checked:hover:bg-heading focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:bg-heading focus-visible:outline-none"
                     ref={ref}
                     {...rest}
                 />

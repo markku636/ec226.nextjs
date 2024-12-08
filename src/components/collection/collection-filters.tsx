@@ -18,7 +18,7 @@ export const CollectionFilters = () => {
     const items = data?.collections.data;
     return (
         <div className="pt-1">
-            <div className="block pb-5 border-b border-gray-300 mb-7">
+            <div className="block pb-5 border-b border-gray-200 mb-7">
                 <div className="mb-2.5 flex items-center justify-between">
                     <h2 className="text-xl font-semibold text-heading md:text-2xl">{t('text-collection-list')}</h2>
                 </div>

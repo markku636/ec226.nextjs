@@ -37,7 +37,7 @@ const ForgetPasswordForm = () => {
     };
 
     return (
-        <div className="mx-auto w-full rounded-lg border border-gray-300 bg-white px-5 py-6 sm:w-96 sm:p-8 md:w-450px">
+        <div className="mx-auto w-full rounded-lg border border-gray-200 bg-white px-5 py-6 sm:w-96 sm:p-8 md:w-450px">
             <div className="mb-9 pt-2.5 text-center">
                 <div onClick={() => dispatch(closeModal())}>
                     <Logo />
@@ -67,7 +67,7 @@ const ForgetPasswordForm = () => {
                 </Button>
             </form>
             <div className="relative mb-6 mt-8 flex flex-col items-center justify-center text-sm text-heading sm:mb-7 sm:mt-10">
-                <hr className="w-full border-gray-300" />
+                <hr className="w-full border-gray-200" />
                 <span className="absolute -top-2.5 bg-white px-2">{t('common:text-or')}</span>
             </div>
             <div className="text-center text-sm text-body sm:text-base">

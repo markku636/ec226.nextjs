@@ -15,7 +15,7 @@ export const ShopFilters = () => {
 
     return (
         <div className="pt-1">
-            <div className="mb-7 block border-b border-gray-300 pb-7">
+            <div className="mb-7 block border-b border-gray-200 pb-7">
                 <div className="mb-2.5 flex items-center justify-between">
                     <h2 className="text-xl font-semibold text-heading md:text-2xl">{t('text-filters')}</h2>
                     <button

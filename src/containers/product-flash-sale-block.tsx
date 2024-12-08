@@ -48,7 +48,7 @@ function ProductFlashSaleWrapper({
     return (
         <>
             <div
-                className={`${className} ${!disableSectionBorder && 'border border-gray-300'} rounded-md ${
+                className={`${className} ${!disableSectionBorder && 'border border-gray-200'} rounded-md ${
                     !disableSectionPadding && 'px-4 pb-5 pt-5 md:px-5 md:pt-6 lg:px-7 lg:pb-7 lg:pt-7'
                 }`}
             >

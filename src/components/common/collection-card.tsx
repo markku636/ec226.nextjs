@@ -32,7 +32,7 @@ const CollectionCard: React.FC<Props> = ({
         <Link
             href={slug}
             className={cn(
-                'group flex flex-col overflow-hidden rounded-md border border-gray-300 pb-4 text-center sm:border-0 sm:pb-0 sm:last:hidden lg:last:flex',
+                'group flex flex-col overflow-hidden rounded-md border border-gray-200 pb-4 text-center sm:border-0 sm:pb-0 sm:last:hidden lg:last:flex',
                 {
                     'justify-between sm:even:flex-col-reverse': variant === 'default',
                     '!pb-0': variant === 'trendy',
@@ -46,7 +46,7 @@ const CollectionCard: React.FC<Props> = ({
                         alt={t('title') || t('text-card-thumbnail')}
                         width={imgWidth}
                         height={imgHeight}
-                        className="bg-gray-300 object-cover transition duration-200 ease-in-out group-hover:opacity-90 sm:rounded-md"
+                        className="bg-gray-200 object-cover transition duration-200 ease-in-out group-hover:opacity-90 sm:rounded-md"
                     />
                 </div>
                 <div

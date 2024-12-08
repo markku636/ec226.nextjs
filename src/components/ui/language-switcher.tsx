@@ -44,7 +44,7 @@ export default function LanguageSwitcher({ languageMenu }: Readonly<ILanguagePro
         <Listbox value={language} onChange={changeMenuLanguage}>
             {({ open }) => (
                 <div className="relative z-10 ltr:ml-2 rtl:mr-2 ltr:lg:ml-0 rtl:lg:mr-0" ref={siteHeaderRef}>
-                    <Listbox.Button className="relative w-full cursor-pointer border border-gray-300  bg-white py-1.5 text-[10px] text-heading shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 ltr:pl-3 ltr:pr-7 ltr:text-left rtl:pl-7 rtl:pr-3 rtl:text-right sm:text-xs">
+                    <Listbox.Button className="relative w-full cursor-pointer border border-gray-200  bg-white py-1.5 text-[10px] text-heading shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 ltr:pl-3 ltr:pr-7 ltr:text-left rtl:pl-7 rtl:pr-3 rtl:text-right sm:text-xs">
                         <span className="flex items-center truncate text-[10px] sm:text-xs">
                             <span className="ltr:mr-1.5 rtl:ml-1.5">
                                 <LanguageIcon language={language.value} />

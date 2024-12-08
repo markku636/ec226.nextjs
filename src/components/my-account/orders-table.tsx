@@ -43,7 +43,7 @@ const OrdersTable = () => {
                             </tr>
                         </thead>
                         <tbody className="text-sm lg:text-base">
-                            <tr className="border-b border-gray-300 last:border-b-0">
+                            <tr className="border-b border-gray-200 last:border-b-0">
                                 <td className="px-4 py-5 ltr:text-left rtl:text-right">
                                     <Link
                                         href="/my-account/orders/3203"
@@ -70,7 +70,7 @@ const OrdersTable = () => {
                                     </Link>
                                 </td>
                             </tr>
-                            <tr className="border-b border-gray-300 last:border-b-0">
+                            <tr className="border-b border-gray-200 last:border-b-0">
                                 <td className="px-4 py-5 ltr:text-left rtl:text-right">
                                     <Link
                                         href="/my-account/orders/3204"
@@ -101,7 +101,7 @@ const OrdersTable = () => {
                     </table>
                 ) : (
                     <div className="w-full space-y-4">
-                        <ul className="flex flex-col space-y-5 rounded-md border border-gray-300 px-4 pb-6 pt-5 text-sm font-semibold text-heading">
+                        <ul className="flex flex-col space-y-5 rounded-md border border-gray-200 px-4 pb-6 pt-5 text-sm font-semibold text-heading">
                             <li className="flex items-center justify-between">
                                 {t('text-order')}
                                 <span className="font-normal">
@@ -137,7 +137,7 @@ const OrdersTable = () => {
                                 </span>
                             </li>
                         </ul>
-                        <ul className="flex flex-col space-y-5 rounded-md border border-gray-300 px-4 pb-6 pt-5 text-sm font-semibold text-heading">
+                        <ul className="flex flex-col space-y-5 rounded-md border border-gray-200 px-4 pb-6 pt-5 text-sm font-semibold text-heading">
                             <li className="flex items-center justify-between">
                                 {t('text-order')}
                                 <span className="font-normal">

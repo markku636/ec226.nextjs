@@ -17,9 +17,9 @@ export interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const variantClasses = {
-    normal: 'bg-white border border-gray-300 focus:shadow focus:outline-none focus:border-heading placeholder-body',
+    normal: 'bg-white border border-gray-200 focus:shadow focus:outline-none focus:border-heading placeholder-body',
     solid: 'bg-gray-100 border border-gray-100 focus:bg-white focus:border-primary',
-    outline: 'border border-gray-300 focus:border-primary',
+    outline: 'border border-gray-200 focus:border-primary',
 };
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {

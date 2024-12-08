@@ -31,7 +31,7 @@ const ShopsPageContent = () => {
     }
 
     return (
-        <div className="border-t border-gray-300 px-4 pb-14 pt-10 md:px-8 lg:pb-16 lg:pt-12 xl:pb-20 xl:pt-14">
+        <div className="border-t border-gray-200 px-4 pb-14 pt-10 md:px-8 lg:pb-16 lg:pt-12 xl:pb-20 xl:pt-14">
             <div className="mx-auto w-full xl:max-w-[1170px]">
                 <div className="mb-6 flex items-center justify-between xl:mb-8">
                     <h2 className="text-lg font-bold text-heading md:text-xl lg:text-2xl xl:text-3xl">

@@ -25,7 +25,7 @@ const ProductsWithFlashSale: React.FC<Props> = ({ className = 'mb-12 md:mb-14 xl
 
     return (
         <div className={`grid grid-cols-1 gap-5 md:gap-14 xl:grid-cols-7 xl:gap-7 2xl:grid-cols-9 ${className}`}>
-            <div className="rounded-lg border border-gray-300 px-4 pb-5 pt-6 md:px-5 md:pt-7 lg:px-7 lg:pb-7 lg:pt-9 xl:col-span-5 xl:pt-7 2xl:col-span-7 2xl:pt-9">
+            <div className="rounded-lg border border-gray-200 px-4 pb-5 pt-6 md:px-5 md:pt-7 lg:px-7 lg:pb-7 lg:pt-9 xl:col-span-5 xl:pt-7 2xl:col-span-7 2xl:pt-9">
                 <SectionHeader sectionHeading="text-top-products" categorySlug="/search" />
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5 xl:-mt-1.5 xl:gap-7 2xl:mt-0">
                     {error ? (

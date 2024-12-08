@@ -29,7 +29,7 @@ const NewMegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
                                 <li className="mb-1.5">
                                     <Link
                                         href={columnItem.path}
-                                        className="block px-5 py-1.5 text-sm font-semibold text-heading hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
+                                        className="block px-5 py-1.5 text-sm font-semibold text-heading hover:bg-gray-200 hover:text-heading xl:px-8 2xl:px-10"
                                     >
                                         {t(columnItem.label)} test
                                     </Link>
@@ -39,13 +39,13 @@ const NewMegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
                                         key={item.id}
                                         className={
                                             columnItem?.columnItemItems?.length === item.id
-                                                ? 'mb-3 border-b border-gray-300 pb-3.5'
+                                                ? 'mb-3 border-b border-gray-200 pb-3.5'
                                                 : ''
                                         }
                                     >
                                         <Link
                                             href={item.path}
-                                            className="block px-5 py-1.5 text-sm text-body hover:bg-gray-300 hover:text-heading xl:px-8 2xl:px-10"
+                                            className="block px-5 py-1.5 text-sm text-body hover:bg-gray-200 hover:text-heading xl:px-8 2xl:px-10"
                                         >
                                             {t(item.label)}
                                         </Link>
