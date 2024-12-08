@@ -1,6 +1,5 @@
 'use client';
-import { useAppDispatch } from '@/redux/features/hooks';
-import { openModal, setModalView } from '@/redux/features/ui/uiSlice';
+
 import BannerCard from '@components/common/banner-card';
 import DownloadApps from '@components/common/download-apps';
 import Subscription from '@components/common/subscription';
@@ -23,14 +22,13 @@ import { ROUTES } from '@utils/routes';
 import { useEffect } from 'react';
 
 export default function Home() {
-    const dispatch = useAppDispatch();
     // const { openModal, setModalView } = useUI();
 
     useEffect(() => {
-        dispatch(setModalView('NEWSLETTER_VIEW'));
+        alert(' dispatch(setModalView(NEWSLETTER_VIEW));');
 
         setTimeout(() => {
-            dispatch(openModal());
+            alert(')  dispatch(openModal());');
         }, 2000);
     }, []);
     return (
