@@ -15,7 +15,7 @@ const CategoryBanner: React.FC<CategoryBannerProps> = ({ className = 'mb-7' }) =
 
     const categoryTitle = slug?.toString().split('-').join('');
     return (
-        <div className={`bg-gray-200 rounded-md relative flex flex-row ${className}`}>
+        <div className={`bg-gray-100 rounded-md relative flex flex-row ${className}`}>
             <div className="hidden md:flex">
                 <Image
                     src={

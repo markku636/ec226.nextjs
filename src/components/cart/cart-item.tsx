@@ -37,7 +37,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             className={`group relative flex h-auto w-full items-center justify-start border-b border-gray-100 bg-white py-4 last:border-b-0 md:py-7`}
             title={item?.name}
         >
-            <div className="relative flex h-24 w-24 flex-shrink-0 cursor-pointer overflow-hidden rounded-md bg-gray-200 ltr:mr-4 rtl:ml-4 md:h-28 md:w-28">
+            <div className="relative flex h-24 w-24 flex-shrink-0 cursor-pointer overflow-hidden rounded-md bg-gray-100 ltr:mr-4 rtl:ml-4 md:h-28 md:w-28">
                 <Image
                     src={item?.image ?? '/assets/placeholder/cart-item.svg'}
                     width={112}

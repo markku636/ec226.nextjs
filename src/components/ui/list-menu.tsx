@@ -11,7 +11,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
         <li className={cn(!hasMegaMenu ? 'group relative' : '')}>
             <Link
                 href={data.link}
-                className="flex items-center py-2 hover:bg-gray-300 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
+                className="flex items-center py-2 hover:bg-gray-100 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
             >
                 {data.icon && <span className="inline-flex ltr:mr-2 rtl:ml-2">{data.icon}</span>}
                 {data.titleLang}
@@ -33,7 +33,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
                                 <Link
                                     href={brand.link}
                                     key={brand.id}
-                                    className="bg-gray-200 border border-gray-300 rounded-md"
+                                    className="bg-gray-100 border border-gray-300 rounded-md"
                                 >
                                     <Image src={brand.icon.src} height={60} width={150} alt={brand.titleLang} />
                                 </Link>
@@ -56,7 +56,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
 const SubMenu: React.FC<any> = ({ dept, data, menuIndex }) => {
     dept = dept + 1;
     return (
-        <ul className="absolute z-0 invisible w-56 py-3 bg-gray-200 opacity-0 subMenuChild top-4 shadow-subMenu ltr:right-full rtl:left-full ltr:2xl:left-full ltr:2xl:right-auto rtl:2xl:left-auto rtl:2xl:right-full">
+        <ul className="absolute z-0 invisible w-56 py-3 bg-gray-100 opacity-0 subMenuChild top-4 shadow-subMenu ltr:right-full rtl:left-full ltr:2xl:left-full ltr:2xl:right-auto rtl:2xl:left-auto rtl:2xl:right-full">
             {data?.map((menu: any, index: number) => {
                 const menuName: string = `sidebar-submenu-${dept}-${menuIndex}-${index}`;
 

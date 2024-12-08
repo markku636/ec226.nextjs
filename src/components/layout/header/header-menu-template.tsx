@@ -36,7 +36,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
                     {item?.columns && Array.isArray(item.columns) && <MegaMenu columns={item.columns} />}
 
                     {item?.subMenu && Array.isArray(item.subMenu) && (
-                        <div className="subMenu invisible absolute bg-gray-200 opacity-0 shadow-header group-hover:visible group-hover:opacity-100 ltr:left-0 rtl:right-0">
+                        <div className="subMenu invisible absolute bg-gray-100 opacity-0 shadow-header group-hover:visible group-hover:opacity-100 ltr:left-0 rtl:right-0">
                             <ul className="py-5 text-sm text-body">
                                 {item.subMenu.map((menu: any, index: number) => {
                                     const dept: number = 1;

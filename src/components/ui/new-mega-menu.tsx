@@ -20,7 +20,7 @@ const NewMegaMenu: React.FC<MegaMenuProps> = ({ columns }) => {
     const t = useTranslations('menu');
 
     return (
-        <div className="megaMenu absolute bg-gray-200 py-7 shadow-header ltr:-left-28 rtl:-right-28 ltr:xl:left-0 rtl:xl:right-0 ">
+        <div className="megaMenu absolute bg-gray-100 py-7 shadow-header ltr:-left-28 rtl:-right-28 ltr:xl:left-0 rtl:xl:right-0 ">
             <div className="grid grid-cols-5">
                 {columns?.map((column) => (
                     <ul className="pb-7 pt-6 even:bg-gray-150 2xl:pb-8 2xl:pt-7" key={column.id}>

@@ -17,7 +17,7 @@ const CategoryListCard: React.FC<Props> = ({ category }) => {
     return (
         <Link
             href={`${ROUTES.CATEGORY}/${category.slug}`}
-            className="flex items-center justify-between rounded-md bg-gray-200 px-5 py-3 transition hover:bg-gray-100 xl:py-3.5 2xl:px-3.5 2xl:py-2.5 3xl:py-3.5"
+            className="flex items-center justify-between rounded-md bg-gray-100 px-5 py-3 transition hover:bg-gray-100 xl:py-3.5 2xl:px-3.5 2xl:py-2.5 3xl:py-3.5"
         >
             <div className="flex items-center">
                 <div className="inline-flex flex-shrink-0 2xl:h-12 2xl:w-12 3xl:h-auto 3xl:w-auto">

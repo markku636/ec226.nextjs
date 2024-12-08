@@ -46,7 +46,7 @@ const DownloadApps: React.FC<Props> = ({ className, variant, disableBorderRadius
     return (
         <div
             className={cn(
-                'flex items-end justify-between rounded-lg bg-gray-200 px-6 pt-5 md:px-12 md:pt-8 lg:px-20 lg:pt-10 xl:pt-14 2xl:px-24 3xl:px-36',
+                'flex items-end justify-between rounded-lg bg-gray-100 px-6 pt-5 md:px-12 md:pt-8 lg:px-20 lg:pt-10 xl:pt-14 2xl:px-24 3xl:px-36',
                 className
             )}
         >

@@ -90,7 +90,7 @@ const ProductCard: FC<ProductProps> = ({
                         (variant === 'gridModernWide' && !bgGray) ||
                         (variant === 'gridTrendy' && !bgGray) ||
                         (variant === 'gridSlim' && !bgGray),
-                    'bg-gray-200': variant === 'list' || bgGray,
+                    'bg-gray-100': variant === 'list' || bgGray,
                     'flex-col items-start ltr:pr-0 rtl:pl-0 md:pb-1': variant === 'gridSlim',
                     'transform items-center border border-gray-100 transition duration-200 ease-in-out hover:-translate-y-1 hover:shadow-listProduct':
                         variant === 'listSmall',

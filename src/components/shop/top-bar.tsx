@@ -1,6 +1,8 @@
 'use client';
 
 import usePageLocale from '@/hooks/use-locale';
+import { useAppDispatch, useAppSelector } from '@/redux/reducer/hooks';
+import { closeSidebar, selectUI } from '@/redux/reducer/ui/ui-slice';
 import { Drawer } from '@components/common/drawer/drawer';
 import motionProps from '@components/common/drawer/motion';
 import FilterIcon from '@components/icons/filter-icon';
@@ -17,13 +19,16 @@ export default function SearchTopBar() {
     const dir = getDirection(usePageLocale());
     const contentWrapperCSS = dir === 'ltr' ? { left: 0 } : { right: 0 };
 
+    const { displaySidebar } = useAppSelector(selectUI);
+    const dispatch = useAppDispatch();
+
     return (
         <div className="flex items-center justify-between mb-7">
             <Text variant="pageHeading" className="hidden pb-1 lg:inline-flex">
                 {t('text-casual-wear')}
             </Text>
             <button
-                className="flex items-center px-4 py-2 text-sm font-semibold transition duration-200 ease-in-out border border-gray-300 rounded-md text-heading hover:bg-gray-200 focus:outline-none lg:hidden"
+                className="flex items-center px-4 py-2 text-sm font-semibold transition duration-200 ease-in-out border border-gray-300 rounded-md text-heading hover:bg-gray-100 focus:outline-none lg:hidden"
                 onClick={() => alert(' dispatch(openFilter())')}
             >
                 <FilterIcon />
@@ -46,8 +51,8 @@ export default function SearchTopBar() {
             {/* TODO: need to use just one drawer component */}
             <Drawer
                 placement={dir === 'rtl' ? 'right' : 'left'}
-                open={true}
-                onClose={() => alert(' dispatch(closeFilter())')}
+                open={displaySidebar}
+                onClose={() => dispatch(closeSidebar())}
                 contentWrapperStyle={contentWrapperCSS}
                 {...motionProps}
             >

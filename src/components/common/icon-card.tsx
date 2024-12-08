@@ -21,11 +21,11 @@ const IconCard: React.FC<Props> = ({ item, effectActive = false, variant = 'defa
         <Link
             href={href}
             className={cn('group flex justify-center  rounded-lg', {
-                'h-28 flex-col bg-gray-200 sm:h-[8.5rem] md:h-40 xl:h-[11.5rem] 2xl:h-44 3xl:h-60':
+                'h-28 flex-col bg-gray-100 sm:h-[8.5rem] md:h-40 xl:h-[11.5rem] 2xl:h-44 3xl:h-60':
                     variant === 'default',
-                'flex-col bg-gray-200 px-6 pb-5 pt-7 lg:px-8 lg:pb-8 lg:pt-10': variant === 'modern',
+                'flex-col bg-gray-100 px-6 pb-5 pt-7 lg:px-8 lg:pb-8 lg:pt-10': variant === 'modern',
                 'flex-col items-center': variant === 'circle',
-                'gap-[25px] bg-gray-200 px-3 py-5 lg:px-4 lg:py-8 xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px]':
+                'gap-[25px] bg-gray-100 px-3 py-5 lg:px-4 lg:py-8 xl:gap-[30px] 2xl:gap-[40px] 3xl:gap-[50px]':
                     variant === 'list',
             })}
         >
@@ -33,7 +33,7 @@ const IconCard: React.FC<Props> = ({ item, effectActive = false, variant = 'defa
                 className={cn('relative flex items-center', {
                     'mx-auto mb-3.5 md:mb-4 lg:mb-5 lg:h-24 xl:mb-2 2xl:mb-6 3xl:mb-8': variant === 'default',
                     'h-16 ltr:mr-auto rtl:ml-auto': variant === 'modern',
-                    'mb-3.5 h-[105px] w-[105px] max-w-full justify-center rounded-full bg-gray-200 md:mb-4 md:h-32 md:w-32 lg:mb-5 lg:h-[140px] lg:w-[140px] xl:h-44 xl:w-44':
+                    'mb-3.5 h-[105px] w-[105px] max-w-full justify-center rounded-full bg-gray-100 md:mb-4 md:h-32 md:w-32 lg:mb-5 lg:h-[140px] lg:w-[140px] xl:h-44 xl:w-44':
                         variant === 'circle',
                     'flex-shrink-0': variant === 'list',
                 })}

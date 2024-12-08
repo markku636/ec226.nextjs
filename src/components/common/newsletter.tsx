@@ -36,7 +36,7 @@ export default function Newsletter() {
         <div className="flex items-center justify-center">
             <div className="flex max-h-full w-full max-w-full flex-col overflow-hidden rounded-md bg-white sm:w-[450px] md:w-[550px] lg:w-[980px] xl:w-[1170px]">
                 <div className="flex items-center">
-                    <div className="hidden flex-shrink-0 items-center justify-center bg-gray-200 lg:flex lg:w-[520px] xl:w-auto">
+                    <div className="hidden flex-shrink-0 items-center justify-center bg-gray-100 lg:flex lg:w-[520px] xl:w-auto">
                         <Image
                             src="/assets/images/newsletter.jpg"
                             alt="Thumbnail"

@@ -1,6 +1,8 @@
 'use client';
 
 import usePageLocale from '@/hooks/use-locale';
+import { useAppDispatch, useAppSelector } from '@/redux/reducer/hooks';
+import { closeFilter, selectUI } from '@/redux/reducer/ui/ui-slice';
 import Scrollbar from '@components/common/scrollbar';
 import { ShopFilters } from '@components/shop/filters';
 import { getDirection } from '@utils/get-direction';
@@ -14,12 +16,16 @@ const FilterSidebar = () => {
     const t = useTranslations('common');
     const dir = getDirection(usePageLocale());
 
+    const dispatch = useAppDispatch();
+
+    const { displayFilter } = useAppSelector(selectUI);
+
     return (
         <div className="flex flex-col justify-between w-full h-full">
             <div className="relative flex w-full flex-shrink-0 items-center justify-between border-b border-gray-100 py-0.5 ltr:pr-5 rtl:pl-5 ltr:md:pr-7 rtl:md:pl-7">
                 <button
                     className="flex items-center justify-center px-4 py-6 text-2xl text-gray-500 transition-opacity hover:opacity-60 focus:outline-none md:px-5 lg:py-8"
-                    onClick={() => alert(' dispatch(closeFilter())')}
+                    onClick={() => dispatch(closeFilter())}
                     aria-label="close"
                 >
                     {dir === 'rtl' ? <IoArrowForward className="text-black" /> : <IoArrowBack className="text-black" />}

@@ -43,7 +43,7 @@ const SubscriptionWithBg: React.FC<Props> = ({ className = 'px-5 sm:px-8 md:px-1
     }
     return (
         <div
-            className={`${className} relative flex flex-col overflow-hidden rounded-lg bg-gray-200 py-10 sm:items-center md:py-14 lg:py-16 xl:items-start`}
+            className={`${className} relative flex flex-col overflow-hidden rounded-lg bg-gray-100 py-10 sm:items-center md:py-14 lg:py-16 xl:items-start`}
         >
             <div className="-mt-1.5 mb-7 text-center md:mb-8 lg:-mt-2 lg:mb-9 xl:-mt-0.5 xl:mb-0 ltr:xl:text-left rtl:xl:text-right">
                 <Text variant="mediumHeading" className="mb-2 md:mb-2.5 lg:mb-3 xl:mb-3.5">
