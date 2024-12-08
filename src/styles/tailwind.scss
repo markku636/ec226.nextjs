@@ -130,7 +130,7 @@
 
     .headerMenu .menuItem {
         > a::before {
-            @apply absolute -bottom-7 w-0 bg-heading ltr:right-0 rtl:left-0;
+            @apply absolute -bottom-3 w-0 bg-heading ltr:right-0 rtl:left-0;
             content: '';
             height: 3px;
             transition: all 0.3s ease-in-out 0s;

@@ -21,7 +21,7 @@ export default function Header({ header }: Readonly<IHeaderProps>) {
                 className={cn('flex h-[45px] items-center justify-center lg:justify-between md:h-[75px] w-full')}
             >
                 <div className="flex justify-between w-full md:w-fit">
-                    <Logo />
+                    <Logo className="py-2" />
                     <div className="md:hidden">
                         <LanguageSwitcher languageMenu={languageMenu} />
                     </div>
