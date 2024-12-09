@@ -87,7 +87,6 @@ const LoginForm = () => {
                                     className="h-0 w-0 opacity-0"
                                     {...register('remember_me')}
                                 />
-                                <span className="slider round absolute inset-0 bg-gray-500 transition-all duration-300 ease-in"></span>
                             </label>
                             <label
                                 htmlFor="remember"
@@ -125,7 +124,7 @@ const LoginForm = () => {
             <Button
                 loading={isLoading}
                 disabled={isLoading}
-                className="mt-2.5 h-11 w-full bg-facebook hover:bg-facebookHover md:h-12"
+                className="mt-2.5 h-11 w-full !bg-facebook !hover:bg-facebookHover md:h-12"
                 onClick={handelSocialLogin}
             >
                 <ImFacebook2 className="text-sm ltr:mr-1.5 rtl:ml-1.5 sm:text-base" />
@@ -134,7 +133,7 @@ const LoginForm = () => {
             <Button
                 loading={isLoading}
                 disabled={isLoading}
-                className="mt-2.5 h-11 w-full bg-google hover:bg-googleHover md:h-12"
+                className="mt-2.5 h-11 w-full !bg-google !hover:bg-googleHover md:h-12"
                 onClick={handelSocialLogin}
             >
                 <ImGoogle2 className="text-sm ltr:mr-1.5 rtl:ml-1.5 sm:text-base" />
