@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, forwardRef } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    variant?: 'flat' | 'slim' | 'smoke' | 'rounded';
+    variant?: 'flat' | 'slim' | 'smoke';
     active?: boolean;
     type?: 'submit' | 'reset' | 'button';
     loading?: boolean;
@@ -25,14 +25,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     } = props;
 
     const rootClassName = cn(
-        'text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border border-black placeholder-white focus-visible:outline-none focus:outline-none',
+        'text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none',
         {
-            'rounded-full ': !disableBorderRadius,
-            'text-black px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart':
+            'rounded-md ': !disableBorderRadius,
+            'bg-heading text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart':
                 variant === 'flat',
-            'h-11 md:h-12 px-5 py-2 transform-none normal-case hover:text-white hover:bg-gray-600 hover:shadow-cart':
+            'h-11 md:h-12 px-5 bg-heading text-white py-2 transform-none normal-case hover:text-white hover:bg-gray-600 hover:shadow-cart':
                 variant === 'slim',
-            'h-11 md:h-12 px-5 text-heading py-2 transform-none normal-case hover:bg-gray-200': variant === 'smoke',
+            'h-11 md:h-12 px-5 bg-gray-200 text-heading py-2 transform-none normal-case hover:bg-gray-300':
+                variant === 'smoke',
             'cursor-not-allowed': loading,
             'cursor-not-allowed hover:cursor-not-allowed': disabled,
         },
@@ -51,7 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
             {children}
             {loading && (
                 <svg
-                    className="animate-spin ltr:-mr-1 rtl:-ml-1 ltr:ml-3 rtl:mr-3 h-5 w-5 text-black"
+                    className="animate-spin ltr:-mr-1 rtl:-ml-1 ltr:ml-3 rtl:mr-3 h-5 w-5 text-white"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -67,7 +68,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
         </button>
     );
 });
-
-Button.displayName = 'Button';
 
 export default Button;

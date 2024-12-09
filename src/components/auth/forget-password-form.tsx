@@ -1,6 +1,7 @@
 'use client';
-import { useAppDispatch } from '@/redux/features/hooks';
-import { closeModal, openModal, setModalView } from '@/redux/features/ui/uiSlice';
+
+import { useAppDispatch } from '@/redux/reducer/hooks';
+import { closeModal, openModal, setModalView } from '@/redux/reducer/ui/ui-slice';
 import Button from '@components/ui/button';
 import Input from '@components/ui/input';
 import Logo from '@components/ui/logo';
