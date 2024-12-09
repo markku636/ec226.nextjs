@@ -8,7 +8,7 @@ import MegaMenu from './mega-menu';
 
 const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, menuIndex }: any) => {
     return (
-        <li className={cn(!hasMegaMenu ? 'group relative' : '')}>
+        <li className={cn(!hasMegaMenu ? 'group/subitem relative' : 'group')}>
             <Link
                 href={data.link}
                 className="flex items-center py-2 hover:bg-gray-200 hover:text-heading ltr:pl-5 ltr:pr-3 rtl:pl-3 rtl:pr-5 ltr:xl:pl-7 ltr:xl:pr-3.5 rtl:xl:pl-3.5 rtl:xl:pr-7"
@@ -56,7 +56,7 @@ const ListMenu = ({ dept, data, hasSubMenu, hasMegaMenu, hasBrands, hasBanners, 
 const SubMenu: React.FC<any> = ({ dept, data, menuIndex }) => {
     dept = dept + 1;
     return (
-        <ul className="absolute z-0 invisible w-56 py-3 bg-gray-100 opacity-0 subMenuChild top-4 shadow-subMenu ltr:right-full rtl:left-full ltr:2xl:left-full ltr:2xl:right-auto rtl:2xl:left-auto rtl:2xl:right-full">
+        <ul className="absolute z-0 invisible w-56 py-3 bg-gray-100 opacity-0 subMenuChild top-0 shadow-subMenu ltr:right-full rtl:left-full ltr:2xl:left-full ltr:2xl:right-auto rtl:2xl:left-auto rtl:2xl:right-full group-hover/subitem:visible group-hover/subitem:opacity-100">
             {data?.map((menu: any, index: number) => {
                 const menuName: string = `sidebar-submenu-${dept}-${menuIndex}-${index}`;
 
